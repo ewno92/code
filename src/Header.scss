@@ -4,7 +4,8 @@
   display: flex;
   align-items: center;
   position: sticky;
-
+  top: 0;
+  z-index: 1;
   .logo {
     font-size: 40px;
     margin: 0 0 5px 10px;
@@ -12,24 +13,27 @@
   }
 
   .header-search {
+    // background-color: white;
+    border-radius: 50px;
     display: flex;
     // width: 300px;
     flex: 1;
     justify-content: center;
     align-items: center;
-    border-radius: 20px;
-    padding: 10px;
-    // background-color: yellow;
+    margin-left: 10px;
+    height: 21px;
     input {
+      //   border-radius: 7px;
       width: 100%;
       border: none;
-      height: 25px;
+      height: 30px;
     }
     .search-icon {
       color: white;
       padding: 3px;
       background-color: gray;
-      height: 22px;
+      height: 30px;
+      width: 30px;
     }
   }
 
@@ -43,11 +47,11 @@
       flex-direction: column;
       margin: 0 10px;
       .line-one {
-        font-size: 11px;
+        font-size: 12px;
         font-weight: 500;
       }
       .line-two {
-        font-size: 16px;
+        font-size: 14px;
         font-weight: 700;
       }
     }
@@ -58,9 +62,11 @@
       padding: 0 10px;
       .cart-icon {
         // color: white;
+        font-size: 40px;
         padding: 0 5px;
       }
       .cart-count {
+        font-size: 20px;
         // color: white;
       }
     }
