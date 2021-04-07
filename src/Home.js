@@ -6,7 +6,24 @@ const Home = () => {
     <div id="home">
       <img className="background" src={bg} alt="" />
       <div className="row">
-        <Product />
+        <Product
+          title="whatIs"
+          price="1.09"
+          rating="2"
+          img="https://cdn.pixabay.com/photo/2016/02/19/10/00/laptop-1209008_960_720.jpg"
+        />
+        <Product
+          title="whatIs"
+          price="999.09"
+          rating="3"
+          img="https://cdn.pixabay.com/photo/2016/02/19/10/00/laptop-1209008_960_720.jpg"
+        />
+        <Product
+          title="whatIs"
+          price="1999999.09"
+          rating="5"
+          img="https://cdn.pixabay.com/photo/2016/02/19/10/00/laptop-1209008_960_720.jpg"
+        />
       </div>
       <div className="row"></div>
       <div className="row"></div>

@@ -6,6 +6,11 @@
   position: sticky;
   top: 0;
   z-index: 1;
+
+  .text-deco-none {
+    text-decoration: none;
+  }
+
   .logo {
     font-size: 40px;
     margin: 0 0 5px 10px;
@@ -55,11 +60,14 @@
         font-weight: 700;
       }
     }
+
+    text-decoration: none;
     .option-basket {
       display: flex;
       align-items: center;
       color: white;
       padding: 0 10px;
+      text-decoration: none;
       .cart-icon {
         // color: white;
         font-size: 40px;
@@ -67,6 +75,7 @@
       }
       .cart-count {
         font-size: 20px;
+        text-decoration: none;
         // color: white;
       }
     }
