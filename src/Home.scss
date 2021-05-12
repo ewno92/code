@@ -1,7 +1,11 @@
 #home {
+  display: flex;
+  justify-content: center;
+
   .background {
     position: absolute;
     width: 100%;
+    max-width: 1800px;
     z-index: -1;
     // margin-bottom: -150px;
     mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
@@ -10,6 +14,6 @@
   .row {
     display: flex;
     // margin: auto;
-    // justify-content: center;
+    justify-content: center;
   }
 }

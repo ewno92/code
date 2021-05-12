@@ -1,5 +1,23 @@
 import "./Product.scss";
+import { useStateValue } from "./StateProvider";
+
 const Product = ({ title, price, img, rating }) => {
+  const [{ basket }, dispatch] = useStateValue();
+  console.log("this is the basket", basket);
+
+  const addToBasket = () => {
+    //dispatch the item into the data layer
+    dispatch({
+      type: "ADD_TO_BASKET",
+      item: {
+        // id: id,
+        title: title,
+        img: img,
+        price: price,
+        rating: rating,
+      },
+    });
+  };
   const convertRating = () => {
     switch (rating) {
       case "1":
@@ -28,7 +46,7 @@ const Product = ({ title, price, img, rating }) => {
         <div className="rating">{convertRating()}</div>
       </div>
       <img src={img} alt="" />
-      <button>Add to Basket</button>
+      <button onClick={addToBasket}>Add to Basket</button>
     </div>
   );
 };
