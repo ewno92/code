@@ -1,7 +1,7 @@
 import "./App.css";
-import Header from "./Header";
-import Home from "./Home";
-import Checkout from "./Checkout";
+import Header from "./components/Header";
+import Home from "./components/home/Home";
+import Checkout from "./components/checkout/Checkout";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 function App() {

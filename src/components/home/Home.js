@@ -1,6 +1,6 @@
 import "./Home.scss";
 import Product from "./Product";
-import bg from "./img/home-bg.jpg";
+import bg from "../.././img/home-bg.jpg";
 const Home = () => {
   return (
     <div id="home">
@@ -9,19 +9,19 @@ const Home = () => {
         <div className="row">
           <Product
             title="whatIs"
-            price="1.09"
+            price={1.09}
             rating="3"
             img="https://cdn.pixabay.com/photo/2016/02/19/10/00/laptop-1209008_960_720.jpg"
           />
           <Product
             title="whatIs"
-            price="999.09"
+            price={99.09}
             rating="3"
             img="https://cdn.pixabay.com/photo/2016/02/19/10/00/laptop-1209008_960_720.jpg"
           />
           <Product
             title="whatIs"
-            price="1999999.09"
+            price={54.09}
             rating="5"
             img="https://cdn.pixabay.com/photo/2016/02/19/10/00/laptop-1209008_960_720.jpg"
           />
@@ -29,13 +29,13 @@ const Home = () => {
         <div className="row">
           <Product
             title="second"
-            price="1999999.09"
+            price={4.09}
             rating="5"
             img="https://cdn.pixabay.com/photo/2016/02/19/10/00/laptop-1209008_960_720.jpg"
           />
           <Product
             title="second"
-            price="1999999.09"
+            price={2.09}
             rating="5"
             img="https://cdn.pixabay.com/photo/2016/02/19/10/00/laptop-1209008_960_720.jpg"
           />

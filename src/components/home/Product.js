@@ -1,5 +1,5 @@
 import "./Product.scss";
-import { useStateValue } from "./StateProvider";
+import { useStateValue } from "../../StateProvider";
 
 const Product = ({ title, price, img, rating }) => {
   const [{ basket }, dispatch] = useStateValue();
