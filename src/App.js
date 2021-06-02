@@ -3,7 +3,7 @@ import "./App.css";
 import Header from "./components/Header";
 import Home from "./components/home/Home";
 import Checkout from "./components/checkout/Checkout";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Login from "./components/Login";
 import { auth } from "./firebase";
 import { useStateValue } from "./StateProvider";

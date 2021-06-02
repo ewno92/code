@@ -3,12 +3,15 @@ import SearchIcon from "@material-ui/icons/Search";
 import ShoppingCartIcon from "@material-ui/icons/ShoppingCart";
 import { Link } from "react-router-dom";
 import { useStateValue } from "../StateProvider";
-
+import { auth } from "./../firebase";
 const Header = () => {
-  const [{ basket, user }, dispatch] = useStateValue();
+  const [{ basket, user }] = useStateValue();
   const handleAuth = () => {
     {
-      console.log("user");
+      if (user) {
+        auth.signOut();
+        console.log("signed out");
+      }
     }
   };
   return (
@@ -27,7 +30,7 @@ const Header = () => {
           <span className="line-two">Sign in</span>
         </div> */}
 
-        <Link className="text-deco-none" to="/login">
+        <Link className="text-deco-none" to={!user && "/login"}>
           <div className="option" onClick={handleAuth}>
             <span className="line-one">Hello</span>
             <span className="line-two">{user ? "Sign Out" : "Sign in"}</span>
