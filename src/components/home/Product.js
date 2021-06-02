@@ -1,7 +1,7 @@
 import "./Product.scss";
 import { useStateValue } from "../../StateProvider";
 
-const Product = ({ title, price, img, rating }) => {
+const Product = ({ id, title, price, img, rating }) => {
   const [{ basket }, dispatch] = useStateValue();
   console.log("this is the basket", basket);
 
@@ -10,7 +10,7 @@ const Product = ({ title, price, img, rating }) => {
     dispatch({
       type: "ADD_TO_BASKET",
       item: {
-        // id: id,
+        id: id,
         title: title,
         img: img,
         price: price,
@@ -20,15 +20,15 @@ const Product = ({ title, price, img, rating }) => {
   };
   const convertRating = () => {
     switch (rating) {
-      case "1":
+      case 1:
         return "★☆☆☆☆";
-      case "2":
+      case 2:
         return "★★☆☆☆";
-      case "3":
+      case 3:
         return "★★★☆☆";
-      case "4":
+      case 4:
         return "★★★★☆";
-      case "5":
+      case 5:
         return "★★★★★";
       default:
         return "☆☆☆☆☆";

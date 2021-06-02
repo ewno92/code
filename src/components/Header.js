@@ -5,8 +5,12 @@ import { Link } from "react-router-dom";
 import { useStateValue } from "../StateProvider";
 
 const Header = () => {
-  const [{ basket }, dispatch] = useStateValue();
-
+  const [{ basket, user }, dispatch] = useStateValue();
+  const handleAuth = () => {
+    {
+      console.log("user");
+    }
+  };
   return (
     <div id="header">
       <Link className="text-deco-none" to="/">
@@ -18,10 +22,18 @@ const Header = () => {
       </div>
 
       <div className="nav">
-        <div className="option">
+        {/* <div className="option">
           <span className="line-one">Hello</span>
           <span className="line-two">Sign in</span>
-        </div>
+        </div> */}
+
+        <Link className="text-deco-none" to="/login">
+          <div className="option" onClick={handleAuth}>
+            <span className="line-one">Hello</span>
+            <span className="line-two">{user ? "Sign Out" : "Sign in"}</span>
+          </div>
+        </Link>
+
         <div className="option">
           <span className="line-one">Return</span>
           <span className="line-two">& Orders</span>
