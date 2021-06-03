@@ -1,6 +1,12 @@
 Current up-to-date live web
 https://code-ecommerce.web.app/
 
+email: test.@test.com
+pw: 123123
+
+***implementation***
+fully functioning user authentication
+cart item add and remove
 
 # Getting Started with Create React App
 
